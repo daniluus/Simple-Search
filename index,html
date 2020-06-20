@@ -1,0 +1,31 @@
+<html>
+	<head>
+
+		<title>Pesquisa</title>
+	</head>
+	<body>
+		<input id="palavra" type="text" />
+		<button onclick="pesquisar()">Pesquisar</button>
+
+
+		<div class="aparecer">Aparece aqui</div>
+		<script>
+			
+
+			const words = ['mi', 'oswero']
+
+			function pesquisar(){
+				let pesquisa = document.getElementById('palavra').value
+
+				var result = words.filter(word => word == pesquisa)
+
+				console.log(result)
+
+				let aparece = document.querySelector(".aparecer")
+
+
+				aparece.innerHTML = `${result}`
+			}
+		</script>
+	</body>
+</html>
